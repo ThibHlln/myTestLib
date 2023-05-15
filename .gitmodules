@@ -1,0 +1,9 @@
+[submodule "inst/include/xtensor"]
+	path = inst/include/xtensor
+	url = https://github.com/xtensor-stack/xtensor
+[submodule "inst/include/xtensor-r"]
+	path = inst/include/xtensor-r
+	url = https://github.com/xtensor-stack/xtensor-r
+[submodule "inst/include/xtl"]
+	path = inst/include/xtl
+	url = https://github.com/xtensor-stack/xtl

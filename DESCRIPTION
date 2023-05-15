@@ -1,0 +1,13 @@
+Package: myTestLib
+Type: Package
+Title: Test library using xtensor-r
+Version: 0.0.0
+Date: 2023-04-14
+Author: Thibault Hallouin
+Maintainer: Thibault Hallouin <thibault.hallouin@inrae.fr>
+Description: Test library using xtensor-r
+SystemRequirements: C++14
+Depends: R (>= 3.0.3)
+License: GPL (>= 3)
+Imports: Rcpp (>= 1.0.8)
+LinkingTo: Rcpp

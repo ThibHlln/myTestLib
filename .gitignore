@@ -1,0 +1,14 @@
+# compilation files
+src/*.o
+src/*.so
+src/*.dll
+
+# R files
+.Rhistory
+.Rapp.history
+.RData
+
+# RStudio files
+*.Rproj
+.Rproj.user
+.Rbuildignore

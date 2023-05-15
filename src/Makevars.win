@@ -1,0 +1,9 @@
+## -*- mode: makefile; -*-
+
+# CXX_STD = CXX14
+
+PKG_CXXFLAGS += -I"../inst/include/xtensor-r/include" \
+                -I"../inst/include/xtl/include" \
+                -I"../inst/include/xtensor/include" \
+                -std=c++14 \
+                -O3

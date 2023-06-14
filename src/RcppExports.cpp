@@ -11,14 +11,25 @@ Rcpp::Rostream<true>&  Rcpp::Rcout = Rcpp::Rcpp_cout_get();
 Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
-// sort_cpp
-xt::rarray<double> sort_cpp(xt::rtensor<double, 4> q);
-RcppExport SEXP _myTestLib_sort_cpp(SEXP qSEXP) {
+// sort_rarray_cpp
+xt::rarray<double> sort_rarray_cpp(xt::rarray<double> q);
+RcppExport SEXP _myTestLib_sort_rarray_cpp(SEXP qSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< xt::rarray<double> >::type q(qSEXP);
+    rcpp_result_gen = Rcpp::wrap(sort_rarray_cpp(q));
+    return rcpp_result_gen;
+END_RCPP
+}
+// sort_rtensor_cpp
+xt::rarray<double> sort_rtensor_cpp(xt::rtensor<double, 4> q);
+RcppExport SEXP _myTestLib_sort_rtensor_cpp(SEXP qSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
     Rcpp::traits::input_parameter< xt::rtensor<double, 4> >::type q(qSEXP);
-    rcpp_result_gen = Rcpp::wrap(sort_cpp(q));
+    rcpp_result_gen = Rcpp::wrap(sort_rtensor_cpp(q));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -35,7 +46,8 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_myTestLib_sort_cpp", (DL_FUNC) &_myTestLib_sort_cpp, 1},
+    {"_myTestLib_sort_rarray_cpp", (DL_FUNC) &_myTestLib_sort_rarray_cpp, 1},
+    {"_myTestLib_sort_rtensor_cpp", (DL_FUNC) &_myTestLib_sort_rtensor_cpp, 1},
     {"_myTestLib_quantile_cpp", (DL_FUNC) &_myTestLib_quantile_cpp, 1},
     {NULL, NULL, 0}
 };

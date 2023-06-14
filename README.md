@@ -29,5 +29,6 @@ $ R
 .   data=rep(c(0.6), 10 * 2 * 11 * 2080),
 .   dim=c(10, 2, 11, 2080)
 . )
-> myTestLib::sort_cpp(q)
+> myTestLib::sort_rtensor_cpp(q)
+> myTestLib::sort_rarray_cpp(q)
 ```

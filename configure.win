@@ -1,0 +1,2 @@
+${R_HOME}/bin${R_ARCH_BIN}/R -q -e "library('Rcpp');Rcpp::compileAttributes();"
+
